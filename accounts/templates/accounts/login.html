@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Log In</title>
+    <link rel='stylesheet' href='https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css'>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap'>
+  </head>
+  <body>
+    <form method="POST" action="">
+      {% csrf_token %}
+      <div class="segment">
+        <h1>Log In</h1>
+      </div>
+      <label>
+        <input type="text" placeholder="Username" name="username" required />
+      </label>
+      <label>
+        <input type="password" placeholder="Password" name="password" required />
+      </label>
+      <button class="red" type="submit"><i class="icon ion-md-lock"></i> Log in</button>
+    </form>
+    <div class="segment">
+    </div>
+</body>
+</html>

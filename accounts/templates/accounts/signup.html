@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>Log In</title>
+    <link rel='stylesheet' href='https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css'>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap'>
+  </head>
+  <body>
+    <h1>Sign Up!</h1>
+
+    <form method="POST" action="{% url 'signup' %}">
+      {% csrf_token %}
+      UserName:
+      <br />
+      <input type="text" name="username"/>
+      <br />
+      Password:
+      <br />
+      <input type="text" name="password1"/>
+      <br />
+    Confirm Password:
+      <br />
+      <input type="text" name="password2"/>
+      <br />
+      <br />
+      <input class="btn btn-primary" type="submit" value="SignUp!"/>
+      <br />
+    <div class="segment">
+    </div>
+</body>
+</html>
